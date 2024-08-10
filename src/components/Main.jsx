@@ -6,7 +6,7 @@ import "../styles.css";
 function Main() {
   return (
     <div id="main" className="bg-black">
-      <div className="w-full min-h-screen object-cover transform scale-x-[-1] opacity-70 background"></div>
+      <div className="w-full min-h-svh object-cover transform scale-x-[-1] opacity-70 background"></div>
       <div className="absolute top-0 left-0 w-full h-full gradient-bottom-to-transparent"></div>
       <div className="w-full h-screen absolute top-0 left-0">
         <div className="max-w-[880px] m-auto h-full w-full flex flex-col justify-center lg:items-start items-center">
