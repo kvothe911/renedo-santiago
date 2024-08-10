@@ -19,28 +19,28 @@ function Sidenav() {
       />
       {nav && (
         <div className="fixed w-full h-screen bg-neutral-950 flex flex-col justify-center items-center z-20">
-          <a
+          <a onClick={handleNav}
             href="#main"
             className="w-[75%] flex justify-center text-neutral-50 items-center rounded-full shadow-lg shadow-indigo-900 bg-neutral-900 m-4 p-4 cursor-pointer hover:scale-105 ease-in duration-200"
           >
             <AiOutlineHome size={20} />
             <span className="pl-4 text-neutral-50">Home</span>
           </a>
-          <a
+          <a onClick={handleNav}
             href="#projects"
             className="w-[75%] flex justify-center text-neutral-50 items-center rounded-full shadow-lg shadow-indigo-900 bg-neutral-900 m-4 p-4 cursor-pointer hover:scale-105 ease-in duration-200"
           >
             <GrProjects size={20} />
             <span className="pl-4 text-neutral-50">Projects</span>
           </a>
-          <a
+          <a onClick={handleNav}
             href="#about"
             className="w-[75%] flex justify-center text-neutral-50 items-center rounded-full shadow-lg shadow-indigo-900 bg-neutral-900 m-4 p-4 cursor-pointer hover:scale-105 ease-in duration-200"
           >
             <BsPerson size={20} />
             <span className="pl-4 text-neutral-50">About me</span>
           </a>
-          <a
+          <a onClick={handleNav}
             href="#contact"
             className="w-[75%] flex justify-center text-neutral-50 items-center rounded-full shadow-lg shadow-indigo-900 bg-neutral-900 m-4 p-4 cursor-pointer hover:scale-105 ease-in duration-200"
           >

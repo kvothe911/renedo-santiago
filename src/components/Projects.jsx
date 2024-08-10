@@ -31,12 +31,14 @@ function Projects() {
               icons={[FaHtml5, FaCss3Alt, IoLogoJavascript]}
             />
           </a>
+          <a href="https://github.com/kvothe911/Backend-CAC" target="_blank">
           <ProjectCard
             img={toDoImg}
             title="ToDo App"
             description="Final backend project, a task management website."
             icons={[FaReact, FaDatabase, FaNodeJs, RiTailwindCssFill]}
           />
+          </a>
         </div>
       </div>
     </div>
