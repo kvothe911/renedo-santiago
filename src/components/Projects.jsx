@@ -22,7 +22,7 @@ function Projects() {
         id="projects"
         className=" max-w-[1040px] m-auto px-10 p-4 py-14 sm:px-20"
       >
-        <h2 className="text-neutral-100 text-3xl md:text-5xl font-bold mt-6 mb-28">
+        <h2 className="text-lime-400 text-3xl md:text-5xl font-bold mt-6 mb-28">
           {t("projects")}
         </h2>
         <div className="grid md:grid-cols-2 md:gap-6 gap-20">

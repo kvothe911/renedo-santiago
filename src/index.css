@@ -4,4 +4,10 @@
 
 * {
     scroll-behavior: smooth;
+    font-family: kode;
+}
+
+@font-face{
+    font-family: 'kode';
+    src: url(./fonts/KodeMono-Medium.ttf);
 }

@@ -4,6 +4,7 @@ import { FaArrowDownLong } from "react-icons/fa6";
 import "../styles.css";
 import { useTranslation } from "react-i18next";
 import "../i18n"
+import RandomTextEffect from "./RandomTextEffect";
 
 function Main() {
 
@@ -17,9 +18,7 @@ function Main() {
       <div className="w-full h-screen absolute top-0 left-0">
         <div className="max-w-[880px] m-auto h-full w-full flex flex-col justify-center lg:items-start items-center">
           <p className="text-neutral-100 sm:text-3xl text-xl">{t('welcome')}</p>
-          <h1 className="text-neutral-100 text-3xl sm:text-5xl font-bold pt-6">
-            Santiago Renedo
-          </h1>
+          <RandomTextEffect text="<santiago renedo>" />
           <h2 className="text-neutral-100 text-xl sm:text-3xl pt-8">
             {t('description')}
           </h2>
@@ -32,7 +31,7 @@ function Main() {
             >
               <FaLinkedinIn
                 size={25}
-                className="text-neutral-100 cursor-pointer hover:scale-[115%] duration-500 move"
+                className="text-neutral-100 cursor-pointer hover:scale-[115%] hover:text-lime-400 duration-500 move"
               />
             </a>
             <a
@@ -42,7 +41,7 @@ function Main() {
             >
               <FaGithub
                 size={25}
-                className="text-neutral-100 cursor-pointer hover:scale-[115%] duration-500 move"
+                className="text-neutral-100 cursor-pointer hover:scale-[115%] hover:text-lime-400 duration-500 move"
               />
             </a>
             <a
@@ -52,7 +51,7 @@ function Main() {
             >
               <FaInstagram
                 size={25}
-                className="text-neutral-100 cursor-pointer hover:scale-[115%] duration-500 move"
+                className="text-neutral-100 cursor-pointer hover:scale-[115%] hover:text-lime-400 duration-500 move"
               />
             </a>
           </div>

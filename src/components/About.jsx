@@ -12,7 +12,7 @@ function About() {
         id="about"
         className="relative max-w-[1040px] flex flex-col top-0 m-auto mx-10 my-16 sm:px-20"
       >
-        <h2 className="text-neutral-100 text-3xl md:text-5xl font-bold pt-16 mb-12 md:mb-16 lg:mb-0">
+        <h2 className="text-lime-400 text-3xl md:text-5xl font-bold pt-16 mb-12 md:mb-16 lg:mb-0">
           {t("about-me")}
         </h2>
         <h3 className="text-neutral-400 text-xl md:text-2xl font-bold sm:pt-0 lg:pt-6 mb-12 md:mb-16 lg:mb-0">
