@@ -1,0 +1,15 @@
+{
+    "welcome": "Hi, my name is",
+    "description": "I'm a Front-End Developer",
+    "projects": "PROJECTS",
+    "kombuchan-project-description": "Course project simulating a website for a kombucha brand.",
+    "todo-project-description": "Final backend project, a task management website.",
+    "about-me": "ABOUT ME",
+    "information": "Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology",
+    "know-about-me": "Know About me!",
+    "description-1-about-me": "I’m Argentine with a diverse professional background. From a young age, I fixed PCs and became an electronics technician. Later, I worked as a lifeguard, which taught me to work under pressure, value teamwork, and make quick decisions.",
+    "description-2-about-me": "Currently, I am studying web development, fascinated by how it can offer practical solutions. Although I have much to learn, my determination and enthusiasm are strong. I am excited about the opportunities in programming and ready to tackle challenges with the same dedication and spirit as in my lifeguarding career.",
+    "skills": "My Skills",
+    "contact": "CONTACT",
+    "description-contact" : "Thank you for visiting my portfolio. If you'd like to get in touch, feel free to connect with me through social media or send me an email."
+}

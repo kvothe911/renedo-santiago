@@ -3,8 +3,18 @@ import { AiOutlineHome, AiOutlineMail, AiOutlineMenu, AiOutlineX } from "react-i
 import { BsPerson } from "react-icons/bs";
 import { GrProjects } from "react-icons/gr";
 import "../styles.css";
+import { useTranslation } from "react-i18next";
+import "../i18n"
+import WorldFlags from 'react-world-flags';
 
 function Sidenav() {
+
+    const {i18n} = useTranslation()
+    const changeLanguage = () => {
+        const newLanguage = i18n.language === 'en' ? 'es' : 'en'
+        i18n.changeLanguage(newLanguage)
+    }
+    
   const [nav, setNav] = useState(false);
   const handleNav = () => {
     setNav(!nav);
@@ -49,7 +59,7 @@ function Sidenav() {
           </a>
         </div>
       )}
-      <div className="md:block hidden fixed top-[25%] z-10">
+      <div className="md:block hidden fixed top-[20%] z-10">
         <div className="flex flex-col py-4 pr-3 bg-indigo-950/30 rounded-r-3xl">
           <a
             href="#main"
@@ -75,6 +85,13 @@ function Sidenav() {
           >
             <AiOutlineMail size={20} className="text-neutral-950" />
           </a>
+          <button onClick={changeLanguage} className="flag-button rounded-full shadow-lg bg-neutral-100 shadow-indigo-700 mx-2 my-4 py-4 px-[0.85rem] cursor-pointer hover:scale-110 ease-in duration-200">
+        <WorldFlags
+          code={i18n.language === 'en' ? 'ES' : 'GB'}
+          style={{ height: '16px', width: '24px', objectFit: 'cover' }} // Ajuste inline
+          alt={i18n.language === 'en' ? 'Español' : 'English'}
+        />
+      </button>
         </div>
       </div>
     </>

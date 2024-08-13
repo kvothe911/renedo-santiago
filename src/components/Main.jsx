@@ -2,22 +2,29 @@ import React from "react";
 import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaArrowDownLong } from "react-icons/fa6";
 import "../styles.css";
+import { useTranslation } from "react-i18next";
+import "../i18n"
 
 function Main() {
+
+    const {t} = useTranslation()
+    
+
   return (
     <div id="main" className="bg-black">
       <div className="w-full min-h-svh object-cover transform scale-x-[-1] opacity-70 background"></div>
       <div className="absolute top-0 left-0 w-full h-full gradient-bottom-to-transparent"></div>
       <div className="w-full h-screen absolute top-0 left-0">
         <div className="max-w-[880px] m-auto h-full w-full flex flex-col justify-center lg:items-start items-center">
-          <p className="text-neutral-100 sm:text-3xl text-xl">Hi, my name is</p>
+          <p className="text-neutral-100 sm:text-3xl text-xl">{t('welcome')}</p>
           <h1 className="text-neutral-100 text-3xl sm:text-5xl font-bold pt-6">
             Santiago Renedo
           </h1>
           <h2 className="text-neutral-100 text-xl sm:text-3xl pt-8">
-            I'm a Front-End Developer
+            {t('description')}
           </h2>
           <div className="flex gap-6 pt-10">
+            
             <a
               href="https://www.linkedin.com/in/santiago-renedo-527752303/"
               target="_blank"

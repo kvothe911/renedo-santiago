@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import { FaLinkedinIn, FaGithub, FaInstagram, FaCopy } from "react-icons/fa";
+import "../i18n"
+import { useTranslation } from "react-i18next";
 
 function Contact() {
+
+    const { t } = useTranslation()
+
   const [copySuccess, setCopySuccess] = useState("");
 
   const email = "renedo.santiago@gmail.com";
@@ -25,12 +30,10 @@ function Contact() {
         className=" max-w-[1040px] m-auto px-10 p-4 py-14 sm:px-20"
       >
         <h2 className="text-neutral-100 text-3xl md:text-5xl font-bold mb-12 md:mb-16 ">
-          CONTACT
+          {t("contact")}
         </h2>
           <p className="text-neutral-100 text-base sm:text-xl">
-            Thank you for visiting my portfolio. If you'd like to get in touch,
-            feel free to connect with me through social media or send me an
-            email.
+            {t("description-contact")}
           </p>
         <div className="mt-16">
           <div className="mb-10 flex gap-10">
