@@ -4,19 +4,20 @@ import Projects from './components/Projects';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import { AnimationProvider } from './components/AnimationContext';
 
 
 function App() {
 
   return (
-    <>
+    <AnimationProvider>
       <Sidenav />
       <Main />
       <Projects />
       <About />
       <Contact />
       <Footer />
-    </>
+    </AnimationProvider>
   )
 }
 

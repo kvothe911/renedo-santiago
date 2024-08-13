@@ -1,14 +1,42 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaArrowDownLong } from "react-icons/fa6";
 import "../styles.css";
 import { useTranslation } from "react-i18next";
 import "../i18n"
 import RandomTextEffect from "./RandomTextEffect";
+import { useAnimation } from "./AnimationContext";
 
 function Main() {
 
-    const {t} = useTranslation()
+    const { t } = useTranslation();
+  const { triggerAnimation } = useAnimation(); // Obtén el triggerAnimation del contexto
+  const [isHovered, setIsHovered] = useState(false);
+  const [animationTimeout, setAnimationTimeout] = useState(null); // Manejo del timeout
+
+  useEffect(() => {
+    if (triggerAnimation) {
+      setIsHovered(true); // Activa la animación al cambiar el idioma
+      if (animationTimeout) {
+        clearTimeout(animationTimeout); // Limpia el timeout anterior si existe
+      }
+      const timeout = setTimeout(() => {
+        setIsHovered(false); // Desactiva la animación después de 2 segundos
+      }, 2000);
+
+      setAnimationTimeout(timeout); // Guarda el timeout para limpiar más tarde
+    }
+  }, [triggerAnimation]);
+
+  const handleMouseEnter = () => {
+    if (!isHovered) { // Solo activa el hover si no está activado
+      setIsHovered(true);
+      const timeout = setTimeout(() => {
+        setIsHovered(false); // Desactiva el hover después de 2 segundos
+      }, 1000);
+      setAnimationTimeout(timeout); // Guarda el timeout para limpiar más tarde
+    }
+  };
     
 
   return (
@@ -17,10 +45,21 @@ function Main() {
       <div className="absolute top-0 left-0 w-full h-full gradient-bottom-to-transparent"></div>
       <div className="w-full h-screen absolute top-0 left-0">
         <div className="max-w-[880px] m-auto h-full w-full flex flex-col justify-center lg:items-start items-center">
-          <p className="text-neutral-100 sm:text-3xl text-xl">{t('welcome')}</p>
-          <RandomTextEffect text="<santiago renedo>" />
-          <h2 className="text-neutral-100 text-xl sm:text-3xl pt-8">
-            {t('description')}
+        <p
+            className="text-neutral-100 sm:text-3xl text-xl"
+          >
+            <RandomTextEffect text={t('welcome')} triggerAnimation={triggerAnimation} />
+          </p>
+          <h1
+            className="text-lime-400 text-3xl sm:text-5xl font-bold pt-6"
+            onMouseEnter={handleMouseEnter}
+          >
+            <RandomTextEffect text="<santiago renedo>" triggerAnimation={isHovered} />
+          </h1>
+          <h2
+            className="text-neutral-100 text-xl sm:text-3xl pt-8"
+          >
+            <RandomTextEffect text={t('description')} triggerAnimation={triggerAnimation} />
           </h2>
           <div className="flex gap-6 pt-10">
             

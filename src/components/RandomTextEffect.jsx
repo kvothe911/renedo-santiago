@@ -1,19 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef } from 'react';
 
-const RandomTextEffect = ({ text }) => {
-  const [displayText, setDisplayText] = useState(text);
-  const [isAnimating, setIsAnimating] = useState(false); // Estado para controlar la animación
+const RandomTextEffect = ({ text, triggerAnimation }) => {
+  const ref = useRef(null);
 
-  const handleMouseOver = () => {
-    if (isAnimating) return; // Si ya está animando, no hacer nada
-
-    setIsAnimating(true); // Inicia la animación
-    const letters = "abcdefghijklmnopqrstuvwxyz";
-    let iterations = 0;
-
-    const interval = setInterval(() => {
-      setDisplayText((prevText) => {
-        return text
+  useEffect(() => {
+    if (triggerAnimation) {
+      const letters = "abcdefghijklmnopqrstuvwxyz";
+      let iterations = 0;
+      const interval = setInterval(() => {
+        let word = text
           .split("")
           .map((letter, index) => {
             if (iterations > index) {
@@ -22,26 +17,21 @@ const RandomTextEffect = ({ text }) => {
             return letters[Math.floor(Math.random() * 26)];
           })
           .join("");
-      });
 
-      if (iterations >= text.length) {
-        clearInterval(interval);
-        setIsAnimating(false); // Finaliza la animación
-      }
+        ref.current.innerText = word;
 
-      iterations += 1 / 2;
-    }, 30);
-  };
+        if (iterations >= text.length) clearInterval(interval);
 
-  return (
-    <h1
-      id="random-text"
-      className="text-lime-400 text-3xl sm:text-5xl font-bold pt-6 cursor-default"
-      onMouseOver={handleMouseOver}
-    >
-      {displayText}
-    </h1>
-  );
+        iterations += 1 / 2;
+      }, 30);
+
+      return () => clearInterval(interval);
+    } else {
+      ref.current.innerText = text;
+    }
+  }, [triggerAnimation, text]);
+
+  return <span ref={ref}>{text}</span>;
 };
 
 export default RandomTextEffect;

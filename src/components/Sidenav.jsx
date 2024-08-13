@@ -9,14 +9,24 @@ import { BsPerson } from "react-icons/bs";
 import { GrProjects } from "react-icons/gr";
 import "../styles.css";
 import { useTranslation } from "react-i18next";
+import { useAnimation } from "./AnimationContext";
 import "../i18n";
 import WorldFlags from "react-world-flags";
 
 function Sidenav() {
   const { i18n } = useTranslation();
-  const changeLanguage = () => {
+  const { triggerAnimation } = useAnimation();
+
+    const changeLanguage = () => {
+    triggerAnimation(); // Activa la animación
     const newLanguage = i18n.language === "en" ? "es" : "en";
-    i18n.changeLanguage(newLanguage);
+    i18n.changeLanguage(newLanguage).then(() => {
+      // Terminar la animación después de un tiempo, si es necesario
+      setTimeout(() => {
+        // La animación puede terminarse si se desea
+        // endAnimation();
+      }, 2000); // Ajusta el tiempo según el efecto deseado
+    });
   };
 
   const [nav, setNav] = useState(false);
