@@ -49,10 +49,12 @@ function About() {
               <li className="px-4 py-2 rounded-md bg-indigo-900">HTML</li>
               <li className="px-4 py-2 rounded-md bg-indigo-900">CSS</li>
               <li className="px-4 py-2 rounded-md bg-indigo-900">JavaScript</li>
+              <li className="px-4 py-2 rounded-md bg-indigo-900">React</li>
+              <li className="px-4 py-2 rounded-md bg-indigo-900">Vite</li>
+              <li className="px-4 py-2 rounded-md bg-indigo-900">Tailwind</li>
               <li className="px-4 py-2 rounded-md bg-indigo-900">NodeJs</li>
               <li className="px-4 py-2 rounded-md bg-indigo-900">Express</li>
-              <li className="px-4 py-2 rounded-md bg-indigo-900">React</li>
-              <li className="px-4 py-2 rounded-md bg-indigo-900">Tailwind</li>
+              <li className="px-4 py-2 rounded-md bg-indigo-900">SQL</li>
             </ul>
           </div>
         </div>
