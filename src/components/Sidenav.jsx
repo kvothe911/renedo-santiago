@@ -42,7 +42,7 @@ function Sidenav() {
           >
             <WorldFlags
               code={i18n.language === "en" ? "ES" : "GB"}
-              style={{ height: "30px", width: "auto", objectFit: "cover" }} // Ajuste inline
+              style={{ height: "auto", width: "45px", objectFit: "cover" }} // Ajuste inline
               alt={i18n.language === "en" ? "Español" : "English"}
             />
           </button>
