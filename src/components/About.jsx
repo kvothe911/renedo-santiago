@@ -10,7 +10,7 @@ function About() {
       <div className="absolute top-0 left-0 w-full h-full gradient-80-to-transparent "></div>
       <div
         id="about"
-        className="relative max-w-[1040px] flex flex-col top-0 m-auto mx-10 my-16 sm:px-20"
+        className="relative max-w-[1040px] flex flex-col top-0 m-auto px-5 my-16 sm:px-20"
       >
         <h2 className="text-lime-400 text-3xl md:text-5xl font-bold pt-16 mb-12 md:mb-16 lg:mb-0">
           {t("about-me")}
@@ -41,15 +41,15 @@ function About() {
           </h3>
           <div>
             <ul className="text-neutral-100 text-lg flex flex-wrap justify-center gap-10 ">
-              <li className="px-4 py-2 rounded-md bg-indigo-900">HTML</li>
-              <li className="px-4 py-2 rounded-md bg-indigo-900">CSS</li>
-              <li className="px-4 py-2 rounded-md bg-indigo-900">JavaScript</li>
-              <li className="px-4 py-2 rounded-md bg-indigo-900">React</li>
-              <li className="px-4 py-2 rounded-md bg-indigo-900">Vite</li>
-              <li className="px-4 py-2 rounded-md bg-indigo-900">Tailwind</li>
-              <li className="px-4 py-2 rounded-md bg-indigo-900">NodeJs</li>
-              <li className="px-4 py-2 rounded-md bg-indigo-900">Express</li>
-              <li className="px-4 py-2 rounded-md bg-indigo-900">SQL</li>
+              <li className="px-4 py-2 rounded-md bg-indigo-900 hover:bg-lime-400 hover:text-black cursor-default">HTML</li>
+              <li className="px-4 py-2 rounded-md bg-indigo-900 hover:bg-lime-400 hover:text-black cursor-default">CSS</li>
+              <li className="px-4 py-2 rounded-md bg-indigo-900 hover:bg-lime-400 hover:text-black cursor-default">JavaScript</li>
+              <li className="px-4 py-2 rounded-md bg-indigo-900 hover:bg-lime-400 hover:text-black cursor-default">React</li>
+              <li className="px-4 py-2 rounded-md bg-indigo-900 hover:bg-lime-400 hover:text-black cursor-default">Vite</li>
+              <li className="px-4 py-2 rounded-md bg-indigo-900 hover:bg-lime-400 hover:text-black cursor-default">Tailwind</li>
+              <li className="px-4 py-2 rounded-md bg-indigo-900 hover:bg-lime-400 hover:text-black cursor-default">NodeJs</li>
+              <li className="px-4 py-2 rounded-md bg-indigo-900 hover:bg-lime-400 hover:text-black cursor-default">Express</li>
+              <li className="px-4 py-2 rounded-md bg-indigo-900 hover:bg-lime-400 hover:text-black cursor-default">SQL</li>
             </ul>
           </div>
         </div>

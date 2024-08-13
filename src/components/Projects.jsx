@@ -20,7 +20,7 @@ function Projects() {
     <div className="w-full bg-black pb-6 gradient-80-to-transparent">
       <div
         id="projects"
-        className=" max-w-[1040px] m-auto px-10 p-4 py-14 sm:px-20"
+        className=" max-w-[1040px] m-auto px-5 p-4 py-14 sm:px-20"
       >
         <h2 className="text-lime-400 text-3xl md:text-5xl font-bold mt-6 mb-28">
           {t("projects")}

@@ -31,7 +31,7 @@ function Main() {
             >
               <FaLinkedinIn
                 size={25}
-                className="text-neutral-100 cursor-pointer hover:scale-[115%] hover:text-lime-400 duration-500 move"
+                className="text-neutral-100 cursor-pointer hover:scale-[115%] hover:text-lime-400 duration-300 move"
               />
             </a>
             <a
@@ -41,7 +41,7 @@ function Main() {
             >
               <FaGithub
                 size={25}
-                className="text-neutral-100 cursor-pointer hover:scale-[115%] hover:text-lime-400 duration-500 move"
+                className="text-neutral-100 cursor-pointer hover:scale-[115%] hover:text-lime-400 duration-300 move"
               />
             </a>
             <a
@@ -51,7 +51,7 @@ function Main() {
             >
               <FaInstagram
                 size={25}
-                className="text-neutral-100 cursor-pointer hover:scale-[115%] hover:text-lime-400 duration-500 move"
+                className="text-neutral-100 cursor-pointer hover:scale-[115%] hover:text-lime-400 duration-300 move"
               />
             </a>
           </div>
