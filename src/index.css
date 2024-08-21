@@ -11,3 +11,17 @@
     font-family: 'kode';
     src: url(./fonts/KodeMono-Medium.ttf);
 }
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #4617be; /* Usar lime-50 o un tono claro */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #a3e635; /* lime-400 */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #84cc16; /* lime-500 */
+}
