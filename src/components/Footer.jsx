@@ -10,7 +10,7 @@ function Footer() {
           &lt;santiago renedo&gt;
         </p>
         <p className="text-neutral-100 text-base sm:text-xl"> &nbsp;|&nbsp;</p>
-        <p className="text-lime-400 text-base sm:text-xl">2024</p>
+        <p className="text-neutral-100 text-base sm:text-xl">2024</p>
       </div>
     </div>
   );
