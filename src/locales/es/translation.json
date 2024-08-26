@@ -1,6 +1,7 @@
 {
     "welcome": "Hola, mi nombre es",
     "description": "Soy Desarrollador Front-End",
+    "cv-button":"Abrir CV",
     "projects": "PROYECTOS",
     "kombuchan-project-description": "Proyecto de curso que simula un sitio web para una marca de kombucha.",
     "todo-project-description": "Proyecto final de backend, un sitio web de gestión de tareas.",

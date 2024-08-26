@@ -1,6 +1,7 @@
 {
     "welcome": "Hi, my name is",
     "description": "I'm a Front-End Developer",
+    "cv-button":"Open Resume",
     "projects": "PROJECTS",
     "kombuchan-project-description": "Course project simulating a website for a kombucha brand.",
     "todo-project-description": "Final backend project, a task management website.",
