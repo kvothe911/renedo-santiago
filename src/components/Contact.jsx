@@ -9,13 +9,15 @@ function Contact() {
 
   const [copySuccess, setCopySuccess] = useState("");
 
-  const email = "renedo.santiago@gmail.com";
+  const user = "renedo.santiago";
+  const domain = "gmail.com" 
+  const email = `${user}@${domain}`;
 
   const copyToClipboard = () => {
     navigator.clipboard
       .writeText(email)
       .then(() => {
-        setCopySuccess("Email copied!");
+        setCopySuccess("Email copied! :)");
         setTimeout(() => setCopySuccess(""), 2000); // El mensaje de copiado desaparecerá después de 2 segundos
       })
       .catch(() => {
@@ -27,7 +29,7 @@ function Contact() {
     <div className="w-full bg-black pb-6 gradient-80-to-transparent">
       <div
         id="contact"
-        className=" max-w-[1040px] m-auto  px-5 pt-14  sm:px-20"
+        className=" max-w-[1040px] m-auto  px-5 py-14 sm:px-20"
       >
         <h2 className="text-lime-400 text-3xl md:text-5xl font-bold mb-12 md:mb-16 ">
           {t("contact")}
@@ -67,21 +69,21 @@ function Contact() {
                 className="text-neutral-100 cursor-pointer hover:scale-[115%] hover:text-lime-400 duration-300 move"
               />
             </a>
-            <button
-              onClick={copyToClipboard}
-              className="ml-4 px-4 py-2 -mt-1 bg-indigo-800 text-white rounded hover:bg-indigo-700 cursor-pointer hover:scale-[105%] duration-500 move"
-            >
-              Copy the Email
-              
-            </button>
-            {copySuccess && (
-              <p className="text-neutral-100 ml-8">{copySuccess}</p>
-            )}
           </div>
           <div className="flex items-center mt-12">
-            
-            
-            
+            <span className="text-neutral-100 px-4 py-2 text-sm sm:text-xl border-2 border-lime-400 rounded-lg">{email}</span>
+            <button
+              onClick={copyToClipboard}
+              className="ml-4 px-4 py-2 bg-indigo-800 text-white rounded hover:bg-indigo-700 cursor-pointer hover:scale-[105%] duration-500 move"
+            >
+              <FaCopy
+                size={25}
+                className="text-neutral-100"
+              />
+            </button>
+            {copySuccess && (
+              <p className="text-neutral-100 absolute mt-28 ml-2">{copySuccess}</p>
+            )}
           </div>
         </div>
       </div>
