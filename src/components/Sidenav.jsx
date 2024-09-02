@@ -17,7 +17,7 @@ function Sidenav() {
   const { i18n } = useTranslation();
   const { triggerAnimation } = useAnimation();
 
-    const changeLanguage = () => {
+  const changeLanguage = () => {
     triggerAnimation(); // Activa la animación
     const newLanguage = i18n.language === "en" ? "es" : "en";
     i18n.changeLanguage(newLanguage).then(() => {
@@ -36,16 +36,16 @@ function Sidenav() {
 
   return (
     <>
-    <button
-            onClick={changeLanguage}
-            className="flag-button absolute top-5 left-4 z-[99] md:hidden cursor-pointer"
-          >
-            <WorldFlags
-              code={i18n.language === "en" ? "ES" : "GB"}
-              style={{ height: "auto", width: "45px", objectFit: "cover" }} // Ajuste inline
-              alt={i18n.language === "en" ? "Español" : "English"}
-            />
-          </button>
+      <button
+        onClick={changeLanguage}
+        className="flag-button absolute top-5 left-4 z-[99] md:hidden cursor-pointer"
+      >
+        <WorldFlags
+          code={i18n.language === "en" ? "ES" : "GB"}
+          style={{ height: "auto", width: "45px", objectFit: "cover" }} // Ajuste inline
+          alt={i18n.language === "en" ? "Español" : "English"}
+        />
+      </button>
       <AiOutlineMenu
         onClick={handleNav}
         size={30}
@@ -93,25 +93,37 @@ function Sidenav() {
             href="#main"
             className="rounded-full shadow-lg bg-neutral-100 shadow-indigo-700 mx-2 my-4 p-4 cursor-pointer hover:scale-110 ease-in duration-200 hover:shadow-lime-400 group"
           >
-            <AiOutlineHome size={20} className="text-neutral-950 group-hover:text-lime-700 duration-200" />
+            <AiOutlineHome
+              size={20}
+              className="text-neutral-950 group-hover:text-lime-700 duration-200"
+            />
           </a>
           <a
             href="#projects"
             className="rounded-full shadow-lg bg-neutral-100 shadow-indigo-700 mx-2 my-4 p-4 cursor-pointer hover:scale-110 ease-in duration-200 hover:shadow-lime-400 group"
           >
-            <GrProjects size={20} className="text-neutral-950 group-hover:text-lime-700 duration-200" />
+            <GrProjects
+              size={20}
+              className="text-neutral-950 group-hover:text-lime-700 duration-200"
+            />
           </a>
           <a
             href="#about"
             className="rounded-full shadow-lg bg-neutral-100 shadow-indigo-700 mx-2 my-4 p-4 cursor-pointer hover:scale-110 ease-in duration-200 hover:shadow-lime-400 group"
           >
-            <BsPerson size={20} className="text-neutral-950 group-hover:text-lime-700 duration-200" />
+            <BsPerson
+              size={20}
+              className="text-neutral-950 group-hover:text-lime-700 duration-200"
+            />
           </a>
           <a
             href="#contact"
             className="rounded-full shadow-lg bg-neutral-100 shadow-indigo-700 mx-2 my-4 p-4 cursor-pointer hover:scale-110 ease-in duration-200 hover:shadow-lime-400 group"
           >
-            <AiOutlineMail size={20} className="text-neutral-950 group-hover:text-lime-700 duration-200" />
+            <AiOutlineMail
+              size={20}
+              className="text-neutral-950 group-hover:text-lime-700 duration-200"
+            />
           </a>
           <button
             onClick={changeLanguage}
